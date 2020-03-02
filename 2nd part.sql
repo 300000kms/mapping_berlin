@@ -103,11 +103,11 @@ select title from flickr where tags like 'berlin'
 
 select title from flickr where tags like '%berlin%'
 
-
-
-
-
-
-
+/*--------*/
+   
+select title from flickr where 
+tags like '%berlin %' or tags like '% berlin' or tags like 'berlin %' or
+desc like '%berlin %' or desc like '% berlin' or desc like 'berlin %' or
+title like '%berlin %' or title like '% berlin' or title like 'berlin %'
 
 
