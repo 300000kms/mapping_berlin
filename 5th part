@@ -1,0 +1,2 @@
+alter table taxi add column hour integer;
+update taxi set hour =  cast(strftime('%H', datetime(timestamp, 'unixepoch')) as int) 
