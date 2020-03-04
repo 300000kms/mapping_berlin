@@ -24,3 +24,15 @@ select recovergeometrycolumn('taxi_hour_grid400', 'geom', 25833, 'POINT')
 
 -- index geometry
 select createspatialindex('taxi_hour_grid400', 'geom')
+                                      
+-- do it in flickr
+                                      
+select count(), 
+total(cast(views as int)) as total, 
+avg(cast(views as int)) as avg, 
+ st_snaptogrid(geometry, 400) as geom 
+from flickr 
+where title like '%berlin%'
+group by geom
+         
+         
